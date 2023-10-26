@@ -1,7 +1,7 @@
 # VK-MERN-
 to start
 ----------------------------------
-git clone https://github.com/thainlao/VK-MERN-
+git clone https://github.com/thainlao/VK-clone-
 ----------------------------------
 cd/frontend // npm i, npm run dev.
 ----------------------------------
