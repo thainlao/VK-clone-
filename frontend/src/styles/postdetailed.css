@@ -1,0 +1,156 @@
+.post_detailed_info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 14px;
+    position: relative;
+    background-color: #222222;
+    border-radius: 9px;
+    border: 1px solid #555555;
+    color: white;
+    width: 100%;
+}
+
+.back {
+    position: absolute;
+    left: 85%;
+    color: white;
+}
+
+.post_detailed_info h2 {
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.post_detailed_info p {
+    font-weight: 100;
+    font-family: "vkfont3";
+    padding: 8px;
+}
+
+.post_text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px;
+    align-items: center;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px;
+}
+
+.date {
+    position: absolute;
+}
+
+.comment_section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #777777;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 450px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.comment {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    padding: 16px;
+    padding-bottom: 20px;
+}
+
+.comment_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    font-size: 14px;
+}
+
+.comment_form {
+    display: flex;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+.commentpost {
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #888888;
+    background-color: #444444;
+    padding: 8px;
+    color: white;
+    height: 45px;
+}
+
+.comments h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-family: "vkfont1";
+}
+
+.commentpost_but {
+    border-radius: 8px;
+    border: none;
+    border: 1px solid #888888;
+    background-color: #444444;
+    font-size: 12px;
+    color: white;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+&:hover{
+    opacity: 0.8;
+}}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    font-size: 14px;
+}
+
+.removepost {
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.authorpost {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.linkpostrem {
+    color: white;
+}
+
+.linkpostrem:hover {
+    opacity: 0.8;
+    text-decoration: line-through;
+}
+
+.you_are_not {
+    margin-bottom: 16px;
+    margin-top: 16px;
+}

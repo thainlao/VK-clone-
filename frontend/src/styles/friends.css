@@ -1,0 +1,71 @@
+.friends {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    background-color: #222222;
+    border-radius: 10px;
+    color: white;
+    font-family: 'vkfont1';
+    gap: 2rem;
+    font-weight: 100;
+}
+
+.friends_count {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    gap: 2rem;
+}
+
+.friends_count p {
+    background-color: #333333;
+    padding: 7px;
+    border-radius: 8px;
+}
+
+.friends input {
+    background-color: #222222;
+    border: 1px solid #888888;
+    padding: 7px;
+    border-radius: 8px;
+    width: 95%;
+    color: white;
+}
+
+.friend_catrgory {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.friend_img {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+}
+
+.friend_img_without {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.friend_container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 8px;
+    border-bottom: 1px solid #555555;
+}
+
+.name_section {
+    display: flex;
+    gap: 1rem;
+}

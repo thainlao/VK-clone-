@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.main_page {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.center_page {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: auto;
+  min-height: 480px;
+  width: 480px;
+  margin-top: 20px;
+}
+
+body {
+  background: rgb(20,20,20);
+  font-family:  'vkfont1';
+}
+
+@font-face {
+  font-family: vkfont1;
+  src: url('./assets/VK_Sans_Display_Regular.ttf');
+}
+
+@font-face {
+  font-family: vkfont2;
+  src: url('./assets/VKSansDisplay-Medium.ttf');
+}
+
+@font-face {
+  font-family: vkfont3;
+  src: url('./assets/VKSansDisplay-Regular.ttf');
+}

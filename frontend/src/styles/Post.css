@@ -1,0 +1,181 @@
+.post {
+    background-color: #222222;
+    border: 1px solid #444444;
+    margin-top: 20px;
+    width: 550px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.post label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.postlabel {
+    gap: 0.8rem;
+    display: flex;
+}
+
+.post h2 {
+    color: white;
+    font-weight: 100;
+    font-size: 24px;
+    font-family:  'vkfont3';
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.post_img {
+    height: 350px;
+    width: 350px;
+    object-fit: contain;
+}
+
+.inputpost {
+    display: none;
+}
+
+.post_textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 35px;
+    background-color: #444444;
+    color: white;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 8px;
+    height: 55px;
+    justify-content: start;
+    align-items: start;
+    border-radius: 8px;
+}
+.post_text_input {
+    height: 35px;
+    border-radius: 8px;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: #444444;
+    color: white;
+}
+
+.post_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.post_buttons button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+&:hover{
+    opacity: 0.7;
+}}
+
+.imgsection_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.clearbutton {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 4%;
+    left: 87%;
+    cursor: pointer;
+}
+
+.clearbutton::before, .clearbutton::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.clearbutton::before {
+    transform: rotate(45deg);
+}
+
+.clearbutton::after {
+    transform: rotate(-45deg);
+}
+
+.imgsection {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+}
+
+.post_img_continer {
+
+}
+
+.post_line {
+    width: 100%;
+    background-color: grey;
+    height: 1px;
+}
+
+.post_info {
+    display: flex;
+    width: 100%;
+    font-size: 13px;
+    opacity: 0.8;
+    gap: 1rem;
+}
+
+.post_created {
+    position: absolute;
+    top: 14%;
+    padding: 8px;
+    background-color: #555555;
+    border-radius: 15px;
+}
+
+.post_info_part {
+    background-color: #555555;
+    padding: 8px;
+    border-radius: 15px;
+    transition: all 0.2s ease-in;
+    opacity: 0.8;
+    border: none;
+    color: white;
+    cursor: pointer;
+&:hover{
+    opacity: 2;
+}}
+
+.post_info_com {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 13px;
+    opacity: 0.8;
+}

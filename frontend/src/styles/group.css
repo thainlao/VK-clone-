@@ -1,0 +1,192 @@
+.avatar_group {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.group_form {
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    border-radius: 10px;
+    gap: 1rem;
+    font-family: "vkfont1";
+    color: white;
+    width: 550px;
+    padding: 8px;
+}
+
+.group_item {
+    display: flex;
+    background-color: #333333;
+
+}
+
+.group_item_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+.group_counter {
+    display: flex;
+    background-color: #444444;
+    width: 120px;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 8px;
+    gap: 0.7rem;
+}
+
+.group_input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+    margin-top: 15px;
+}
+
+.group_form input {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 9px;
+    border: 1px solid #777777;
+    background-color: #333333;
+    color: white;
+}
+
+.create_group {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.2s ease-in;
+    margin-top: 8px;
+    cursor: pointer;
+&:hover{
+    opacity: 0.8;
+}}
+
+.groups_length {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* GROUP DETAILER*/
+/* GROUP DETAILER*/
+/* GROUP DETAILER*/
+
+.group_detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: white;
+    font-family: "vkfont3";
+}
+
+.group_detailed_main_pic {
+    width: 550px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.group_detailed_sub_pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translateY(-20px);
+}
+
+.group_detailed_pic {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 80px;
+    height: auto;
+    background-color: #222222;
+    border-radius: 8px;
+
+}
+
+.group_detailed_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.subs {
+    display: flex;
+    flex-direction: column;
+}
+
+.subs button {
+    width: 100px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 25px;
+
+}
+
+.friendlist {
+    display: flex;
+    background-color: #222222;
+    padding: 16px;
+    flex-direction: column;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #555555;
+}
+
+.friendlist_text {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.friendlist_text p {
+    opacity: 0.8;
+}
+
+.friend{
+    height: 80px;
+    width: 80px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.friend1{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #444444;
+}
+
+.friends_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.friend_first {
+    display: flex;
+    gap: 1rem;
+    padding: 14px;
+}
+
+.friend_second {
+    display: flex;
+    gap: 1rem;
+    padding: 14px;
+}
