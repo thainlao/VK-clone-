@@ -12,7 +12,6 @@ import { useAppDispatch } from "./hoocs/hoocs";
 import { useEffect } from 'react';
 import { getMe } from "./redux/reducers/authSlice";
 import Navbar from "./pages/Navbar";
-import Images from "./components/Communities";
 import MyProfile from "./pages/MyProfile";
 import AllUsers from "./components/AllUsers";
 import UserDetailPage from "./components/UserDetailPage";

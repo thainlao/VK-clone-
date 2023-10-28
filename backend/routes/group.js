@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import { checkAuth } from '../middlewares/checkAuth.js'
-import { createGroup, getGroupById, joinGroup, getAllGroups, uploadGroupAvatar, removeUserFromGroup } from '../controllers/group.js'
+import { createGroup, removeGroup, getGroupById, joinGroup, getAllGroups, uploadGroupAvatar, removeUserFromGroup } from '../controllers/group.js'
 
 const router = new Router()
 
@@ -11,7 +11,7 @@ router.post('/create', checkAuth, createGroup)
 router.get('/getgroup/:groupId', getGroupById)
 
 //join
-router.post('/join', checkAuth, joinGroup);
+router.post('/:id/join', checkAuth, joinGroup);
 
 //get all
 router.get('/getgroups', checkAuth, getAllGroups)
@@ -20,6 +20,9 @@ router.get('/getgroups', checkAuth, getAllGroups)
 router.post('/groupimg', checkAuth, uploadGroupAvatar);
 
 //leave
-router.post('/leave', checkAuth, removeUserFromGroup);
+router.post('/:id/leave', checkAuth, removeUserFromGroup);
+
+//removePost
+router.delete('/:id', checkAuth, removeGroup);
 
 export default router

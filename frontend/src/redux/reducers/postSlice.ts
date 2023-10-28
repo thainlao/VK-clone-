@@ -51,34 +51,34 @@ export const postSlice = createSlice({
     extraReducers: (builder) => {
         //Создание
         builder.addCase(createPost.pending, (state) => {
-            state.loading = true
+            state.isLoading = true
           });
           builder.addCase(createPost.fulfilled, (state, action) => {
-            state.loading = false
+            state.isLoading = false
             state.posts.push(action.payload)
           });
           builder.addCase(createPost.rejected, (state) => {
-            state.loading = false
+            state.isLoading = false
           });
 
           //получение поста
           builder.addCase(getAllPost.pending, (state) => {
-            state.loading = true
+            state.isLoading = true
           });
 
           builder.addCase(getAllPost.fulfilled, (state, action) => {
-            state.loading = false
+            state.isLoading = false
             state.posts = action.payload.posts
             state.popularPosts = action.payload.popularPosts
           });
 
           builder.addCase(getAllPost.rejected, (state) => {
-            state.loading = false
+            state.isLoading = false
           });
 
           //like
           builder.addCase(likePost.pending, (state) => {
-            state.loading = true
+            state.isLoading = true
           });
 
           builder.addCase(likePost.fulfilled, (state, action: any) => {
@@ -90,21 +90,21 @@ export const postSlice = createSlice({
             }
           });
           builder.addCase(likePost.rejected, (state) => {
-            state.loading = false
+            state.isLoading = false
           });
 
           //удаление
           builder.addCase(removePost.pending, (state) => {
-            state.loading = true
+            state.isLoading = true
           });
 
           builder.addCase(removePost.fulfilled, (state, action) => {
-            state.loading = false
+            state.isLoading = false
             state.posts = state.posts.filter((post) => post._id !== action.payload._id,)
           });
 
           builder.addCase(removePost.rejected, (state) => {
-            state.loading = false
+            state.isLoading = false
           });
     },
 })

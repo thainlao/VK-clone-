@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const GroupsSchema = new mongoose.Schema({
         name: { type: String, required: true },
+        username: {type: String},
         description: { type: String },
         thema: { type: String },
         members: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],

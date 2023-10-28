@@ -8,14 +8,17 @@ import '../styles/group.css';
 const GroupItem = ({ group }: { group: IGroup }) => (
     <Link to={`/group/${group._id}`}>
       <div className='group_item'>
-        {group?.avatar && (
+        {group.avatar ? (
           <img className="avatar_group" src={`http://localhost:5001/${group.avatar}`} alt={`${group.avatar}`} />
+        ): (
+          <div className='avatar_group_none'></div>
         )}
 
         <div className='group_item_text'>
           <h2>{group.name}</h2>
           <p>{group.thema}</p>
           <p>{group.members.length} followers</p>
+          <p>{group.username}</p>
         </div>
 
       </div>
@@ -60,7 +63,7 @@ const Communities = () => {
 
     return (
         <div className='group_form'>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form>
                 <h2>Create Group</h2>
 
                 <label>

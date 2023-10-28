@@ -9,6 +9,11 @@ export interface AuthState {
     surname: string | null,
 }
 
+export interface IJoin {
+    userId: string;
+    groupId: string;
+}
+
 export interface PostState {
     posts: any[]
     popularPosts: any[],
@@ -73,12 +78,18 @@ export interface CreateCommentParams {
     userId: string | null
 }
 
+export interface JoinGroupParams {
+    groupId: string
+    userId: string | null
+}
+
 export interface IGroup {
     _id: string;
-    id: string;
     name: string;
+    username: string;
     thema: string
     description: string;
     avatar: string;
     members: any[]
+    author: string;
 }

@@ -133,6 +133,12 @@
     object-fit: contain;
 }
 
+.emptyphoto {
+    height: 250px;
+    width: 250px;
+    object-fit: contain;
+}
+
 .post_img_continer {
 
 }

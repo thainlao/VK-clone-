@@ -23,6 +23,7 @@ const PostComponent: React.FC<Post> = ({
   const dispatch = useAppDispatch();
   const user = useAppSelector((state) => state.authReducer.user);
   const {isLoading} = useAppSelector((state) => state.authReducer)
+  
   const handleLike = (postId: string) => {
     const liked = post?.likes.some((like: any) => like.userId === user?.id)
     if (liked) {

@@ -6,6 +6,7 @@ import User from '../models/User.js';
 export const createGroup = async (req, res) => {
     try {
       const { name, description, thema } = req.body;
+      const user = await User.findById(req.userId)
 
       if (req.files) {
         let fileName = Date.now().toString() + req.files.image.name
@@ -13,6 +14,7 @@ export const createGroup = async (req, res) => {
         req.files.image.mv(path.join(__dirname, '..', 'uploads', fileName))
 
         const newGroupWithImage = new Group({
+            username: user.username,
             name,
             description,
             thema,
@@ -21,7 +23,7 @@ export const createGroup = async (req, res) => {
         })
 
         await newGroupWithImage.save()
-        return res.json(newPostWithImage)
+        return res.json(newGroupWithImage)
     }
 
     const newGroupWithoutImg = new Group({
@@ -30,6 +32,7 @@ export const createGroup = async (req, res) => {
       thema,
       avatar: '',
       author: req.userId,
+      username: user.username,
     })
       await newGroupWithoutImg.save();
       return res.json(newGroupWithoutImg);
@@ -53,44 +56,46 @@ export const getGroupById = async (req, res) => {
 };
 
 export const joinGroup = async (req, res) => {
-  const { groupId, userId } = req.body;
   try {
-    const group = await Group.findById(groupId);
+    const groupId = req.params.id; 
+    const userId = req.userId; 
 
+    const group = await Group.findById(groupId);
     if (!group) {
-      return res.json({ message: 'Group not found' });
+      return res.status(404).json({ message: 'Group Not Found.' });
     }
 
     if (group.members.includes(userId)) {
-      return res.json({ message: 'You are already a member of this group' });
+      return res.status(400).json({ message: 'User is already a member of the group.' });
     }
 
     group.members.push(userId);
     await group.save();
 
-    return res.json({ message: 'Joined the group successfully' });
+    res.json({ message: 'User has joined the group successfully.' });
   } catch (error) {
     res.json({ message: 'Something went wrong.' });
   }
 };
 
 export const removeUserFromGroup = async (req, res) => {
-  const { groupId, userId } = req.body;
   try {
-    const group = await Group.findById(groupId);
+    const groupId = req.params.id; 
+    const userId = req.userId; 
 
+    const group = await Group.findById(groupId);
     if (!group) {
-      return res.json({ message: 'Group not found' });
+      return res.status(404).json({ message: 'Group Not Found.' });
     }
 
     if (!group.members.includes(userId)) {
-      return res.json({ message: 'You are not a member of this group' });
+      return res.status(400).json({ message: 'User is not a member of the group.' });
     }
 
     group.members = group.members.filter(memberId => memberId.toString() !== userId);
     await group.save();
 
-    return res.json({ message: 'Left the group successfully' });
+    res.json({ message: 'User has been removed from the group.' });
   } catch (error) {
     res.json({ message: 'Something went wrong.' });
   }
@@ -129,3 +134,16 @@ export const uploadGroupAvatar = async (req, res) => {
       res.json({ message: 'Something went wrong.' });
   }
 };
+
+export const removeGroup = async (req, res) => {
+  try {
+      const group = await Group.findByIdAndDelete(req.params.id);
+      if (!group) {
+          res.json({ message: 'Group was not found' })
+      }
+
+      res.json({message: 'Group was deleted'})
+  } catch (e) {
+      res.json({ message: 'Что-то пошло не так.' })
+  }
+}
